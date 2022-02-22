@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root {
+  --dark-blue: #5A7684;
+  --light-blue: #C5D1EB;
+  --med-blue: #92AFD7;
+  --dark-green: #1F2F16;
+  --square-sizing: 10vw;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background-color: var(--dark-blue);
+  color: var(--light-blue);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.display {
+  font-size: 2rem;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, var(--square-sizing));
+  grid-template-rows: repeat(3,var(--square-sizing));
+  gap: .25rem;
+}
+
+.square {
+  background-color: var(--light-blue);
+  color: var(--dark-green);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(var(--square-sizing) - 5vw);
+}
+
+.square:hover {
+  background-color: var(--med-blue);
+}
+
+.restart {
+  border: none;
+  background-color: var(--light-blue);
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: var(--dark-blue);
+}
